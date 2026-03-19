@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sky Cleaner Services — Drone-Powered Exterior Cleaning</title>
+  <meta name="description" content="Sky Cleaner Services delivers cutting-edge drone-powered exterior cleaning solutions. Advanced, safe, and eco-conscious cleaning at any height." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <svg class="nav-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="16" cy="16" r="4" fill="#6DBE45"/>
+          <line x1="16" y1="4" x2="16" y2="12" stroke="#6DBE45" stroke-width="2" stroke-linecap="round"/>
+          <line x1="16" y1="20" x2="16" y2="28" stroke="#6DBE45" stroke-width="2" stroke-linecap="round"/>
+          <line x1="4" y1="16" x2="12" y2="16" stroke="#6DBE45" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="16" x2="28" y2="16" stroke="#6DBE45" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="16" cy="4" r="2.5" fill="white"/>
+          <circle cx="16" cy="28" r="2.5" fill="white"/>
+          <circle cx="4" cy="16" r="2.5" fill="white"/>
+          <circle cx="28" cy="16" r="2.5" fill="white"/>
+        </svg>
+        <span class="nav-brand">Sky Cleaner Services</span>
+      </div>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="index.html#capabilities" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+
+      <a href="#contact" class="nav-cta" id="nav-cta-btn">Get a Quote</a>
+
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">✕</button>
+    <ul class="mobile-links" role="list">
+      <li><a href="index.html" class="mobile-link">Home</a></li>
+      <li><a href="about.html" class="mobile-link">About Us</a></li>
+      <li><a href="index.html#capabilities" class="mobile-link">Services</a></li>
+      <li><a href="contact.html" class="mobile-link">Contact Us</a></li>
+    </ul>
+    <a href="#contact" class="mobile-cta">Get a Quote</a>
+  </div>
+
+  <!-- ====== HERO SECTION ====== -->
+  <section id="hero" aria-label="Hero section">
+
+    <!-- Background image layer -->
+    <div class="hero-bg" aria-hidden="true">
+      <img src="hero.png" alt="" class="hero-bg-img" />
+      <div class="hero-bg-overlay"></div>
+      <!-- Animated sky gradient fallback -->
+      <div class="hero-sky-layer" aria-hidden="true"></div>
+    </div>
+
+    <!-- Floating particles -->
+    <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+
+    <!-- Grid lines decoration -->
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="hero-content">
+
+      <!-- Top badge -->
+      <div class="hero-badge" data-animate="fade-up" data-delay="0">
+        <span class="badge-dot"></span>
+        <span>Advanced Drone Cleaning Technology</span>
+        <span class="badge-tag">2026</span>
+      </div>
+
+      <!-- Main heading -->
+      <h1 class="hero-title" data-animate="fade-up" data-delay="100">
+        <span class="title-line">Cleaning at a</span>
+        <span class="title-line title-accent">Higher Standard</span>
+      </h1>
+
+      <!-- Sub-headline -->
+      <p class="hero-tagline" data-animate="fade-up" data-delay="200">
+        Advanced Drone-Powered Exterior Cleaning Solutions
+      </p>
+
+      <!-- Description -->
+      <p class="hero-description" data-animate="fade-up" data-delay="300">
+        Sky Cleaner Services provides innovative, safe, and efficient<br class="br-desktop" />
+        cleaning solutions for high-rise buildings, industrial facilities, and renewable energy infrastructure in Djibouti.
+      </p>
+
+      <!-- CTA buttons -->
+      <div class="hero-actions" data-animate="fade-up" data-delay="400">
+        <a href="#contact" class="btn-primary" id="hero-quote-btn">
+          <span>Request a Quote</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#technology" class="btn-ghost-hero">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 5.5L10 8l-3.5 2.5" fill="currentColor"/></svg>
+          <span>Watch Technology</span>
+        </a>
+      </div>
+
+      <!-- Trust bar -->
+      <div class="hero-trust" data-animate="fade-up" data-delay="500">
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1l2 4.5L15 6l-3.5 3.5.8 5L8 12l-4.3 2.5.8-5L1 6l5-.5L8 1z" fill="#6DBE45"/></svg>
+          <span>500+ Projects Delivered</span>
+        </div>
+        <div class="trust-sep" aria-hidden="true"></div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2l1.5 3 3.5.5-2.5 2.5.6 3.5L8 10l-3.1 1.5.6-3.5L3 5.5l3.5-.5L8 2z" fill="#6DBE45"/></svg>
+          <span>99% Safety Record</span>
+        </div>
+        <div class="trust-sep" aria-hidden="true"></div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1C4.13 1 1 4.13 1 8s3.13 7 7 7 7-3.13 7-7-3.13-7-7-7zm0 12.6C4.9 13.6 2.4 11.1 2.4 8c0-3.1 2.5-5.6 5.6-5.6 3.1 0 5.6 2.5 5.6 5.6 0 3.1-2.5 5.6-5.6 5.6z" fill="#6DBE45"/><path d="M8 5v4l2.5 1.5" stroke="#6DBE45" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <span>24/7 Operational Support</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll-indicator" aria-label="Scroll down">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+
+    <!-- Bottom stats ribbon -->
+    <div class="hero-ribbon" id="overview">
+      <div class="ribbon-item">
+        <strong>500+</strong><span>Projects</span>
+      </div>
+      <div class="ribbon-div" aria-hidden="true"></div>
+      <div class="ribbon-item">
+        <strong>99%</strong><span>Safety Rate</span>
+      </div>
+      <div class="ribbon-div" aria-hidden="true"></div>
+      <div class="ribbon-item">
+        <strong>40%</strong><span>Water Saved</span>
+      </div>
+      <div class="ribbon-div" aria-hidden="true"></div>
+      <div class="ribbon-item">
+        <strong>0</strong><span>Scaffolding Required</span>
+      </div>
+      <div class="ribbon-div" aria-hidden="true"></div>
+      <div class="ribbon-item">
+        <strong>24/7</strong><span>Support</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ====== TECHNOLOGY SECTION ====== -->
+  <section class="tech-section" id="technology" aria-label="Technology">
+    <div class="section-container">
+      <div class="section-header-centered">
+        <div class="section-tag">Technology</div>
+        <h2 class="section-title-white">Engineered for<br /><span class="gradient-text">precision cleaning.</span></h2>
+        <p class="section-desc-white">Our drones combine aerospace-grade engineering with industrial cleaning systems to deliver unmatched results at any height.</p>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-card" data-animate="fade-up">
+          <div class="tech-card-icon">⚙️</div>
+          <h3>Advanced Pressure Systems</h3>
+          <p>Deliver consistent, powerful results on any surface — from glass facades to industrial steel panels.</p>
+        </div>
+        <div class="tech-card" data-animate="fade-up" data-delay="100">
+          <div class="tech-card-icon">🎯</div>
+          <h3>AI-Assisted Navigation</h3>
+          <p>Smart control systems ensure precision positioning and safety at any altitude, in any weather condition.</p>
+        </div>
+        <div class="tech-card" data-animate="fade-up" data-delay="200">
+          <div class="tech-card-icon">💧</div>
+          <h3>Optimized Water Usage</h3>
+          <p>High-efficiency nozzles achieve maximum coverage with up to 40% less water than traditional methods.</p>
+        </div>
+        <div class="tech-card" data-animate="fade-up" data-delay="300">
+          <div class="tech-card-icon">📡</div>
+          <h3>Live Sensor Feedback</h3>
+          <p>Real-time camera and sensor arrays monitor surface cleanliness and adjust pressure dynamically.</p>
+        </div>
+        <div class="tech-card" data-animate="fade-up" data-delay="400">
+          <div class="tech-card-icon">🔩</div>
+          <h3>Modular Architecture</h3>
+          <p>Swap cleaning heads in minutes. Designed for efficiency across complex structures and surface types.</p>
+        </div>
+        <div class="tech-card" data-animate="fade-up" data-delay="500">
+          <div class="tech-card-icon">🛡️</div>
+          <h3>Zero Human Exposure</h3>
+          <p>Fully remote operations eliminate risk to workers on high-rise structures and hazardous environments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CORE CAPABILITIES CAROUSEL ====== -->
+  <section class="capabilities-section light-section" id="capabilities" aria-label="Core Capabilities">
+    <div class="section-container" style="padding-bottom: 2rem;">
+      <div class="section-header-centered" style="margin-bottom: 2.5rem;">
+        <div class="section-tag-dark">Capabilities</div>
+        <h2 class="section-title-dark">Core <span class="blue-text">Capabilities.</span></h2>
+        <div class="section-desc-dark" style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1rem;">
+          <div style="height: 1px; flex: 1; max-width: 60px; background: rgba(30,95,175,0.2);"></div>
+          <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue-mid); font-weight: 700;">Drag to Explore</span>
+          <div style="height: 1px; flex: 1; max-width: 60px; background: rgba(30,95,175,0.2);"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="carousel-wrapper" data-animate="fade-up">
+      <div class="carousel-track" id="capabilitiesTrack">
+        <!-- Item 1 -->
+        <div class="carousel-item">
+          <div class="carousel-img-wrap">
+            <img src="service_highrise.png" alt="High-Rise Window Cleaning" draggable="false" />
+          </div>
+          <div class="carousel-content">
+            <h3>High-Rise Window Cleaning</h3>
+            <p>Spotless, streak-free glass exterior cleaning for skyscrapers across the city skyline.</p>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="carousel-item">
+          <div class="carousel-img-wrap">
+            <img src="service_facade.png" alt="Building & Facade Restoration" draggable="false" />
+          </div>
+          <div class="carousel-content">
+            <h3>Building & Facade Restoration</h3>
+            <p>High-pressure washing to restore the original look of stone, brick, and concrete facades.</p>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="carousel-item">
+          <div class="carousel-img-wrap">
+            <img src="service_fleet.png" alt="Fleet & Heavy Equipment Cleaning" draggable="false" />
+          </div>
+          <div class="carousel-content">
+            <h3>Fleet & Heavy Eq. Cleaning</h3>
+            <p>Efficient dirt and grime removal for commercial fleets and heavy operational machinery.</p>
+          </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="carousel-item">
+          <div class="carousel-img-wrap">
+            <img src="service_solar.png" alt="Wind & Solar Cleaning" draggable="false" />
+          </div>
+          <div class="carousel-content">
+            <h3>Wind & Solar Cleaning</h3>
+            <p>Safe and effective cleaning for solar panel fields and wind turbines, optimizing energy output.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ZIG-ZAG FEATURES SECTION ====== -->
+  <section class="zigzag-section" aria-label="Key features">
+    <div class="zigzag-container">
+
+      <!-- ROW 1: Visual LEFT — Text RIGHT -->
+      <div class="zigzag-row">
+        <div class="zigzag-visual zz-from-left" data-zz>
+          <div class="zz-visual-card">
+            <div class="zz-icon-ring">🚁</div>
+            <div class="zz-stat-row">
+              <div class="zz-stat"><span>0</span><small>Scaffolding</small></div>
+              <div class="zz-stat"><span>3×</span><small>Faster</small></div>
+              <div class="zz-stat"><span>100%</span><small>Safe</small></div>
+            </div>
+            <div class="zz-tag-row">
+              <span class="zz-tag">High-Rise</span>
+              <span class="zz-tag">Zero Risk</span>
+              <span class="zz-tag">Fully Remote</span>
+            </div>
+          </div>
+        </div>
+        <div class="zigzag-text zz-from-right" data-zz>
+          <div class="zz-label">No Scaffolding Required</div>
+          <h2 class="zz-heading">Reach any height.<br /><span class="gradient-text">Without the risk.</span></h2>
+          <p class="zz-body">Our drones eliminate the need for scaffolding, rope access, or cherry pickers — cutting setup costs by up to 70% and removing all fall risks for your crew.</p>
+          <ul class="zz-bullets">
+            <li><span class="zz-bullet-dot"></span>Deploy on any facade in under 30 minutes</li>
+            <li><span class="zz-bullet-dot"></span>Certified for buildings up to 300m</li>
+            <li><span class="zz-bullet-dot"></span>No disruption to building occupants</li>
+          </ul>
+          <a href="#contact" class="zz-cta">Get a Free Assessment →</a>
+        </div>
+      </div>
+
+      <!-- ZIG-ZAG CONNECTOR -->
+      <div class="zz-connector" aria-hidden="true">
+        <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0 0 L100 60 L200 0" stroke="rgba(60,120,216,0.25)" stroke-width="1.5" fill="none" stroke-dasharray="6 4"/>
+        </svg>
+      </div>
+
+      <!-- ROW 2: Text LEFT — Visual RIGHT -->
+      <div class="zigzag-row zigzag-row-reverse">
+        <div class="zigzag-text zz-from-left" data-zz>
+          <div class="zz-label">Precision Water Systems</div>
+          <h2 class="zz-heading">Powerful spray.<br /><span class="gradient-text">Pinpoint control.</span></h2>
+          <p class="zz-body">Our high-pressure nozzle arrays deliver up to 150 bar of cleaning pressure, while smart flow control ensures optimal water use — every drop counts.</p>
+          <ul class="zz-bullets">
+            <li><span class="zz-bullet-dot zz-dot-green"></span>150 bar pressure output</li>
+            <li><span class="zz-bullet-dot zz-dot-green"></span>40% less water vs traditional methods</li>
+            <li><span class="zz-bullet-dot zz-dot-green"></span>Adjustable spray patterns per surface type</li>
+          </ul>
+          <a href="#contact" class="zz-cta">Learn About Our Tech →</a>
+        </div>
+        <div class="zigzag-visual zz-from-right" data-zz>
+          <div class="zz-visual-card zz-card-blue">
+            <div class="zz-icon-ring">💧</div>
+            <div class="zz-stat-row">
+              <div class="zz-stat"><span>150</span><small>Bar PSI</small></div>
+              <div class="zz-stat"><span>40%</span><small>Less Water</small></div>
+              <div class="zz-stat"><span>99%</span><small>Coverage</small></div>
+            </div>
+            <div class="zz-tag-row">
+              <span class="zz-tag">High-Pressure</span>
+              <span class="zz-tag">Eco-Flow</span>
+              <span class="zz-tag">Adaptive</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ZIG-ZAG CONNECTOR -->
+      <div class="zz-connector zz-connector-flip" aria-hidden="true">
+        <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0 60 L100 0 L200 60" stroke="rgba(109,190,69,0.25)" stroke-width="1.5" fill="none" stroke-dasharray="6 4"/>
+        </svg>
+      </div>
+
+      <!-- ROW 3: Visual LEFT — Text RIGHT -->
+      <div class="zigzag-row">
+        <div class="zigzag-visual zz-from-left" data-zz>
+          <div class="zz-visual-card zz-card-green">
+            <div class="zz-icon-ring">🌱</div>
+            <div class="zz-stat-row">
+              <div class="zz-stat"><span>0</span><small>Emissions</small></div>
+              <div class="zz-stat"><span>100%</span><small>Electric</small></div>
+              <div class="zz-stat"><span>Bio</span><small>Agents</small></div>
+            </div>
+            <div class="zz-tag-row">
+              <span class="zz-tag zz-tag-green">Eco Certified</span>
+              <span class="zz-tag zz-tag-green">Net Zero</span>
+              <span class="zz-tag zz-tag-green">Carbon Safe</span>
+            </div>
+          </div>
+        </div>
+        <div class="zigzag-text zz-from-right" data-zz>
+          <div class="zz-label zz-label-green">Eco-Responsible Operations</div>
+          <h2 class="zz-heading">Better results.<br /><span class="eco-gradient-text">Better for Earth.</span></h2>
+          <p class="zz-body">Our entire fleet runs on electric power with zero direct emissions. We use only biodegradable, eco-certified cleaning solutions approved for urban runoff environments.</p>
+          <ul class="zz-bullets">
+            <li><span class="zz-bullet-dot zz-dot-green"></span>100% electric-powered drones</li>
+            <li><span class="zz-bullet-dot zz-dot-green"></span>Biodegradable, pH-neutral cleaning agents</li>
+            <li><span class="zz-bullet-dot zz-dot-green"></span>ESG-compliant reporting for every project</li>
+          </ul>
+          <a href="#contact" class="zz-cta zz-cta-green">Start Green Cleaning →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== INDUSTRIES SECTION ====== -->
+  <section class="industries-section light-section" id="industries" aria-label="Industries we serve">
+    <div class="section-container">
+      <div class="section-header-centered">
+        <div class="section-tag-dark">Industries</div>
+        <h2 class="section-title-dark">Built for every<br /><span class="blue-text">vertical.</span></h2>
+        <p class="section-desc-dark">From commercial real estate to industrial facilities — Sky Cleaner adapts to your environment.</p>
+      </div>
+      <div class="industry-grid">
+        <div class="industry-card">
+          <div class="industry-icon">🏢</div>
+          <h3>Commercial Buildings</h3>
+          <p>Glass facades, curtain walls, and multi-story commercial properties cleaned safely and efficiently.</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon">🏭</div>
+          <h3>Industrial Facilities</h3>
+          <p>Warehouses, factories, and plants requiring routine exterior maintenance without production downtime.</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon">🏗️</div>
+          <h3>Construction Sites</h3>
+          <p>Post-construction cleaning with minimal disruption to ongoing operations and tight timelines.</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon">⚡</div>
+          <h3>Solar Installations</h3>
+          <p>Panel-safe cleaning protocols that maintain energy efficiency and maximize power output.</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon">🌉</div>
+          <h3>Infrastructure</h3>
+          <p>Bridges, towers, and complex structures inaccessible by traditional scaffolding methods.</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon">🏨</div>
+          <h3>Hospitality</h3>
+          <p>Hotels and resorts maintaining pristine exterior appearances with minimal operational disruption.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ECO SECTION ====== -->
+  <section class="eco-section" id="solutions" aria-label="Eco and safety">
+    <div class="section-container">
+      <div class="eco-inner">
+        <div class="eco-text-col">
+          <div class="section-tag">Safety &amp; Environment</div>
+          <h2 class="section-title-white">Safe for people.<br /><span class="eco-gradient-text">Better for the planet.</span></h2>
+          <p class="section-desc-white">Every mission is engineered to protect workers, clients, and the environment — without compromising results.</p>
+          <ul class="eco-list">
+            <li>
+              <span class="eco-check">✓</span>
+              <div><strong>Zero human exposure at height</strong><br /><small>Remote operations eliminate risk to all ground and aerial workers.</small></div>
+            </li>
+            <li>
+              <span class="eco-check">✓</span>
+              <div><strong>Water-efficient cleaning systems</strong><br /><small>Up to 40% water reduction versus conventional pressure washing.</small></div>
+            </li>
+            <li>
+              <span class="eco-check">✓</span>
+              <div><strong>Biodegradable cleaning agents</strong><br /><small>Eco-certified solutions safe for runoff into urban drainage systems.</small></div>
+            </li>
+            <li>
+              <span class="eco-check">✓</span>
+              <div><strong>Electric-powered fleet</strong><br /><small>Zero direct emissions across all drone operations.</small></div>
+            </li>
+          </ul>
+        </div>
+        <div class="eco-visual-col">
+          <div class="eco-metric-cards">
+            <div class="eco-metric">
+              <div class="eco-metric-number">40%</div>
+              <div class="eco-metric-label">Less Water Used</div>
+              <div class="eco-metric-bar"><div class="eco-metric-fill" style="width:40%"></div></div>
+            </div>
+            <div class="eco-metric">
+              <div class="eco-metric-number">100%</div>
+              <div class="eco-metric-label">Electric Powered</div>
+              <div class="eco-metric-bar"><div class="eco-metric-fill eco-fill-green" style="width:100%"></div></div>
+            </div>
+            <div class="eco-metric">
+              <div class="eco-metric-number">0</div>
+              <div class="eco-metric-label">Workers at Height</div>
+              <div class="eco-metric-bar"><div class="eco-metric-fill eco-fill-green" style="width:5%"></div></div>
+            </div>
+            <div class="eco-metric">
+              <div class="eco-metric-number">99%</div>
+              <div class="eco-metric-label">Safety Record</div>
+              <div class="eco-metric-bar"><div class="eco-metric-fill" style="width:99%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PROCESS SECTION ====== -->
+  <section class="process-section light-section" aria-label="Our process">
+    <div class="section-container">
+      <div class="section-header-centered">
+        <div class="section-tag-dark">How It Works</div>
+        <h2 class="section-title-dark">From assessment<br /><span class="blue-text">to completion.</span></h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">01</div>
+          <h3>Site Assessment</h3>
+          <p>Our team surveys the site and designs a custom drone flight plan tailored to your structure.</p>
+        </div>
+        <div class="process-connector" aria-hidden="true"></div>
+        <div class="process-step">
+          <div class="step-number">02</div>
+          <h3>Drone Deployment</h3>
+          <p>Precision-calibrated drones are deployed with optimized cleaning solutions and pressure settings.</p>
+        </div>
+        <div class="process-connector" aria-hidden="true"></div>
+        <div class="process-step">
+          <div class="step-number">03</div>
+          <h3>Live Monitoring</h3>
+          <p>Real-time sensor data and camera feeds ensure quality control throughout the operation.</p>
+        </div>
+        <div class="process-connector" aria-hidden="true"></div>
+        <div class="process-step">
+          <div class="step-number">04</div>
+          <h3>Completion Report</h3>
+          <p>You receive a full digital report with before/after imagery and coverage analytics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT / CTA SECTION ====== -->
+  <section class="contact-section" id="contact" aria-label="Request a quote">
+    <div class="section-container">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <div class="section-tag-dark">Get Started</div>
+          <h2 class="section-title-dark">Ready to clean<br /><span class="blue-text">at scale?</span></h2>
+          <p class="contact-desc">Tell us about your project and we'll deploy a solution built around your needs and timeline.</p>
+          <div class="contact-badges">
+            <div class="badge"><span class="badge-check">✓</span> Free site assessment</div>
+            <div class="badge"><span class="badge-check">✓</span> No scaffolding costs</div>
+            <div class="badge"><span class="badge-check">✓</span> Insured &amp; certified operators</div>
+            <div class="badge"><span class="badge-check">✓</span> 24-hour quote turnaround</div>
+          </div>
+        </div>
+        <form class="contact-form" id="quoteForm" novalidate aria-label="Quote request form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="John" required autocomplete="given-name" />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Smith" required autocomplete="family-name" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@company.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+253 77 879440" autocomplete="tel" />
+          </div>
+          <div class="form-group">
+            <label for="buildingType">Building Type</label>
+            <select id="buildingType" name="buildingType">
+              <option value="" disabled selected>Select your building type</option>
+              <option value="commercial">Commercial Building</option>
+              <option value="industrial">Industrial Facility</option>
+              <option value="residential">Residential Complex</option>
+              <option value="infrastructure">Infrastructure / Bridge</option>
+              <option value="solar">Solar Installation</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" placeholder="Describe your property, size, and cleaning requirements..." rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn-form-submit" id="submit-quote-btn">
+            <span class="btn-text">Request a Quote</span>
+            <span class="btn-icon" aria-hidden="true">→</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <svg class="footer-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="16" cy="16" r="4" fill="#6DBE45"/>
+            <line x1="16" y1="4" x2="16" y2="12" stroke="#6DBE45" stroke-width="2" stroke-linecap="round"/>
+            <line x1="16" y1="20" x2="16" y2="28" stroke="#6DBE45" stroke-width="2" stroke-linecap="round"/>
+            <line x1="4" y1="16" x2="12" y2="16" stroke="#6DBE45" stroke-width="2" stroke-linecap="round"/>
+            <line x1="20" y1="16" x2="28" y2="16" stroke="#6DBE45" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="16" cy="4" r="2.5" fill="white"/>
+            <circle cx="16" cy="28" r="2.5" fill="white"/>
+            <circle cx="4" cy="16" r="2.5" fill="white"/>
+            <circle cx="28" cy="16" r="2.5" fill="white"/>
+          </svg>
+          <span>Sky Cleaner Services</span>
+        </div>
+        <p class="footer-tagline">Cleaning at a higher standard.</p>
+      </div>
+      <div class="footer-links-cols">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul role="list">
+            <li><a href="index.html#capabilities">High-Rise Window Cleaning</a></li>
+            <li><a href="index.html#capabilities">Building & Facade Restoration</a></li>
+            <li><a href="index.html#capabilities">Fleet Cleaning</a></li>
+            <li><a href="index.html#capabilities">Wind & Solar Cleaning</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Information</h4>
+          <ul role="list">
+            <li style="color:var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">CEO: Allale Hassan Robleh</li>
+            <li style="color:var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">Djibouti City, Djibouti</li>
+            <li><a href="mailto:skycleaners.dj@gmail.com">skycleaners.dj@gmail.com</a></li>
+            <li><a href="tel:77879440">Phone: 77 879440</a></li>
+            <li><a href="https://skycleanersservices.com">skycleanersservices.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Sky Cleaner Services. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="formToast" role="alert" aria-live="polite"></div>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="main.js"></script>
+  <script src="mail.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Sky Cleaner Services</title>
+  <meta name="description" content="Contact Sky Cleaner Services for a free exterior cleaning assessment." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .page-header {
+      padding: 160px 2rem 80px;
+      background: var(--blue-deep);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: ''; position: absolute; top:0; left:0; right:0; bottom:0;
+      background: radial-gradient(circle at top right, rgba(111,168,220,0.15) 0%, transparent 60%);
+    }
+    .page-title {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 900; color: white; margin-bottom: 1rem; position: relative;
+    }
+    .page-subtitle {
+       font-size: 1.25rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; position: relative;
+    }
+    .contact-page-section {
+      padding: 6rem 2rem;
+      background: var(--blue-offwhite);
+    }
+    .contact-info-list { margin-top: 2rem; }
+    .contact-info-list p {
+      font-size: 1.05rem; color: var(--text-dark); margin-bottom: 0.5rem; font-weight: 500;
+    }
+  </style>
+</head>
+<body style="background: var(--blue-offwhite); color: var(--text-dark);">
+
+  <!-- ====== NAVBAR ====== -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <svg class="nav-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="16" cy="16" r="4" fill="#6DBE45"/>
+          <line x1="16" y1="4" x2="16" y2="12" stroke="#6DBE45" stroke-width="2" stroke-linecap="round"/>
+          <line x1="16" y1="20" x2="16" y2="28" stroke="#6DBE45" stroke-width="2" stroke-linecap="round"/>
+          <line x1="4" y1="16" x2="12" y2="16" stroke="#6DBE45" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="16" x2="28" y2="16" stroke="#6DBE45" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="16" cy="4" r="2.5" fill="white"/>
+          <circle cx="16" cy="28" r="2.5" fill="white"/>
+          <circle cx="4" cy="16" r="2.5" fill="white"/>
+          <circle cx="28" cy="16" r="2.5" fill="white"/>
+        </svg>
+        <span class="nav-brand">Sky Cleaner Services</span>
+      </div>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="index.html#capabilities" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+
+      <a href="contact.html" class="nav-cta" id="nav-cta-btn">Get a Quote</a>
+
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">✕</button>
+    <ul class="mobile-links" role="list">
+      <li><a href="index.html" class="mobile-link">Home</a></li>
+      <li><a href="about.html" class="mobile-link">About Us</a></li>
+      <li><a href="index.html#capabilities" class="mobile-link">Services</a></li>
+      <li><a href="contact.html" class="mobile-link">Contact Us</a></li>
+    </ul>
+    <a href="contact.html" class="mobile-cta">Get a Quote</a>
+  </div>
+
+  <header class="page-header">
+    <h1 class="page-title">Contact Us</h1>
+    <p class="page-subtitle">We're here to help you clean at scale.</p>
+  </header>
+
+  <section class="contact-page-section" aria-label="Request a quote">
+    <div class="section-container">
+      <div class="contact-grid">
+        <div class="contact-left" data-animate="fade-up">
+          <div class="section-tag-dark">Get Started</div>
+          <h2 class="section-title-dark">Ready to clean<br /><span class="blue-text">at scale?</span></h2>
+          <p class="contact-desc">Tell us about your project and we'll deploy a solution built around your needs and timeline.</p>
+          
+          <div class="contact-info-list" style="margin-bottom: 2rem;">
+            <p><strong>CEO:</strong> Allale Hassan Robleh</p>
+            <p>📍 Djibouti City, Djibouti</p>
+            <p>📞 Phone: 77 879440</p>
+            <p>📧 Email: skycleaners.dj@gmail.com</p>
+            <p>🌐 Website: skycleanersservices.com</p>
+          </div>
+
+          <div class="contact-badges">
+            <div class="badge"><span class="badge-check">✓</span> Free site assessment</div>
+            <div class="badge"><span class="badge-check">✓</span> No scaffolding costs</div>
+            <div class="badge"><span class="badge-check">✓</span> Insured &amp; certified operators</div>
+            <div class="badge"><span class="badge-check">✓</span> 24-hour quote turnaround</div>
+          </div>
+        </div>
+        <form class="contact-form" id="quoteForm" novalidate aria-label="Quote request form" data-animate="fade-up" data-delay="100">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="John" required autocomplete="given-name" />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Smith" required autocomplete="family-name" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@company.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+253 77 879440" autocomplete="tel" />
+          </div>
+          <div class="form-group">
+            <label for="buildingType">Building Type</label>
+            <select id="buildingType" name="buildingType">
+              <option value="" disabled selected>Select your building type</option>
+              <option value="commercial">Commercial Building</option>
+              <option value="industrial">Industrial Facility</option>
+              <option value="residential">Residential Complex</option>
+              <option value="infrastructure">Infrastructure / Bridge</option>
+              <option value="solar">Solar Installation</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" placeholder="Describe your property, size, and cleaning requirements..." rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn-form-submit" id="submit-quote-btn">
+            <span class="btn-text">Request a Quote</span>
+            <span class="btn-icon" aria-hidden="true">→</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <svg class="footer-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="16" cy="16" r="4" fill="#6DBE45"/>
+            <line x1="16" y1="4" x2="16" y2="12" stroke="#6DBE45" stroke-width="2" stroke-linecap="round"/>
+            <line x1="16" y1="20" x2="16" y2="28" stroke="#6DBE45" stroke-width="2" stroke-linecap="round"/>
+            <line x1="4" y1="16" x2="12" y2="16" stroke="#6DBE45" stroke-width="2" stroke-linecap="round"/>
+            <line x1="20" y1="16" x2="28" y2="16" stroke="#6DBE45" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="16" cy="4" r="2.5" fill="white"/>
+            <circle cx="16" cy="28" r="2.5" fill="white"/>
+            <circle cx="4" cy="16" r="2.5" fill="white"/>
+            <circle cx="28" cy="16" r="2.5" fill="white"/>
+          </svg>
+          <span>Sky Cleaner Services</span>
+        </div>
+        <p class="footer-tagline">Cleaning at a higher standard.</p>
+      </div>
+      <div class="footer-links-cols">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul role="list">
+            <li><a href="index.html#capabilities">High-Rise Window Cleaning</a></li>
+            <li><a href="index.html#capabilities">Building & Facade Restoration</a></li>
+            <li><a href="index.html#capabilities">Fleet Cleaning</a></li>
+            <li><a href="index.html#capabilities">Wind & Solar Cleaning</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Information</h4>
+          <ul role="list">
+            <li style="color:var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">CEO: Allale Hassan Robleh</li>
+            <li style="color:var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">Djibouti City, Djibouti</li>
+            <li><a href="mailto:skycleaners.dj@gmail.com">skycleaners.dj@gmail.com</a></li>
+            <li><a href="tel:77879440">Phone: 77 879440</a></li>
+            <li><a href="https://skycleanersservices.com">skycleanersservices.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Sky Cleaner Services. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="formToast" role="alert" aria-live="polite"></div>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="main.js"></script>
+  <script src="mail.js"></script>
+</body>
+</html>
