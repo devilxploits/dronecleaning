@@ -90,7 +90,7 @@ const TRANSLATIONS = {
     'zz1.title':  'Reach any height.<br /><span class="gradient-text">Without the risk.</span>',
     'zz1.body':   'Our drones eliminate the need for scaffolding, rope access, or cherry pickers — cutting setup costs by up to 70% and removing all fall risks for your crew.',
     'zz1.b1':     'Deploy on any facade in under 30 minutes',
-    'zz1.b2':     'Certified for buildings up to 100m',
+    'zz1.b2':     'Certified for buildings up to 160m',
     'zz1.b3':     'No disruption to building occupants',
     'zz1.cta':    'Get a Free Assessment →',
     'zz1.stat1s': 'Scaffolding',
@@ -169,8 +169,8 @@ const TRANSLATIONS = {
     'video.desc':  'Real operations, real results — see exactly how Sky Cleaner Services transforms buildings across Djibouti.',
 
     /* ── Process section ── */
-    'proc.tag':   'Our Process',
-    'proc.title': 'Precision from<br /><span class="gradient-text">start to finish.</span>',
+    'proc.tag':   'How It Works',
+    'proc.title': 'From assessment<br /><span class="blue-text">to completion.</span>',
     'proc.desc':  'A clean, structured process that gets results — every time.',
     'proc.s1.title': 'Site Assessment',
     'proc.s1.desc':  'Our team surveys the site and designs a custom drone flight plan tailored to your structure.',
@@ -334,7 +334,7 @@ const TRANSLATIONS = {
     'zz1.title':  'Atteignez n\'importe quelle hauteur.<br /><span class="gradient-text">Sans le risque.</span>',
     'zz1.body':   'Nos drones éliminent le besoin d\'échafaudages, d\'accès par corde ou de nacelles élévatrices — réduisant les coûts d\'installation jusqu\'à 70% et supprimant tous les risques de chute pour votre équipe.',
     'zz1.b1':     'Déploiement sur toute façade en moins de 30 minutes',
-    'zz1.b2':     'Certifié pour les bâtiments jusqu\'à 100m',
+    'zz1.b2':     'Certifié pour les bâtiments jusqu\'à 160m',
     'zz1.b3':     'Aucune perturbation pour les occupants',
     'zz1.cta':    'Obtenir une Évaluation Gratuite →',
     'zz1.stat1s': 'Échafaudage',
@@ -413,8 +413,8 @@ const TRANSLATIONS = {
     'video.desc':  'Opérations réelles, résultats réels — voyez comment Sky Cleaner Services transforme les bâtiments à Djibouti.',
 
     /* ── Process section ── */
-    'proc.tag':   'Notre Processus',
-    'proc.title': 'Précision du<br /><span class="gradient-text">début à la fin.</span>',
+    'proc.tag':   'Comment Ça Marche',
+    'proc.title': 'De l\'évaluation<br /><span class="blue-text">à l\'achèvement.</span>',
     'proc.desc':  'Un processus clair et structuré qui garantit des résultats — à chaque fois.',
     'proc.s1.title': 'Évaluation du Site',
     'proc.s1.desc':  'Notre équipe inspecte le site et conçoit un plan de vol drone personnalisé adapté à votre structure.',
@@ -542,7 +542,7 @@ function applyTranslations() {
   }
 
   /* Sync flag button icon */
-  const LANG_FLAGS = { en: '🇬🇧', fr: '🇫🇷' };
+  const LANG_FLAGS = { en: '🇨🇦', fr: '🇫🇷' };
   document.querySelectorAll('.flag-current').forEach(el => {
     el.textContent = LANG_FLAGS[currentLang] || LANG_FLAGS.en;
   });

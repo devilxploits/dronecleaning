@@ -52,11 +52,11 @@
 
       <div class="lang-dropdown">
         <button class="lang-flag-btn" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
-          <span class="flag-current">&#x1F1EC;&#x1F1E7;</span>
+          <span class="flag-current">&#x1F1E8;&#x1F1E6;</span>
         </button>
         <div class="lang-dropdown-menu">
           <button class="lang-dropdown-item active" data-lang="en">
-            <span class="item-flag">&#x1F1EC;&#x1F1E7;</span>
+            <span class="item-flag">&#x1F1E8;&#x1F1E6;</span>
             <span>English</span>
           </button>
           <button class="lang-dropdown-item" data-lang="fr">
@@ -85,7 +85,7 @@
     </ul>
     <div class="mobile-lang-flags">
       <button class="mobile-flag-btn active" data-lang="en">
-        <span class="item-flag">&#x1F1EC;&#x1F1E7;</span> EN
+        <span class="item-flag">&#x1F1E8;&#x1F1E6;</span> EN
       </button>
       <button class="mobile-flag-btn" data-lang="fr">
         <span class="item-flag">&#x1F1EB;&#x1F1F7;</span> FR
@@ -106,7 +106,7 @@
       <div class="contact-grid">
         <div class="contact-left" data-animate="fade-up">
           <div class="section-tag-dark" data-i18n="contact.tag">Get Started</div>
-          <h2 class="section-title-dark">Ready to clean<br /><span class="blue-text">at scale?</span></h2>
+          <h2 class="section-title-dark" data-i18n-html="contact.title">Ready to clean<br /><span class="blue-text">at scale?</span></h2>
           <p class="contact-desc" data-i18n="contact.desc">Tell us about your project and we'll deploy a solution built around your needs and timeline.</p>
           
           <div class="contact-info-list" style="margin-bottom: 2rem;">
@@ -118,10 +118,10 @@
           </div>
 
           <div class="contact-badges">
-            <div class="badge"><span class="badge-check">✓</span> Free site assessment</div>
-            <div class="badge"><span class="badge-check">✓</span> No scaffolding costs</div>
-            <div class="badge"><span class="badge-check">✓</span> Insured &amp; certified operators</div>
-            <div class="badge"><span class="badge-check">✓</span> 24-hour quote turnaround</div>
+            <div class="badge" data-i18n="contact.badge1"><span class="badge-check">✓</span> Free site assessment</div>
+            <div class="badge" data-i18n="contact.badge2"><span class="badge-check">✓</span> No scaffolding costs</div>
+            <div class="badge" data-i18n="contact.badge3"><span class="badge-check">✓</span> Insured &amp; certified operators</div>
+            <div class="badge" data-i18n="contact.badge4"><span class="badge-check">✓</span> 24-hour quote turnaround</div>
           </div>
         </div>
         <!-- ====== CONTACT / CTA SECTION ====== -->
@@ -131,19 +131,19 @@
       
       <!-- LEFT CONTENT -->
       <div class="contact-left">
-        <div class="section-tag-dark">Get Started</div>
-        <h2 class="section-title-dark">
+        <div class="section-tag-dark" data-i18n="contact.tag">Get Started</div>
+        <h2 class="section-title-dark" data-i18n-html="contact.title">
           Ready to clean<br /><span class="blue-text">at scale?</span>
         </h2>
-        <p class="contact-desc">
+        <p class="contact-desc" data-i18n="contact.desc">
           Tell us about your project and we'll deploy a solution built around your needs and timeline.
         </p>
 
         <div class="contact-badges">
-          <div class="badge">✓ Free site assessment</div>
-          <div class="badge">✓ No scaffolding costs</div>
-          <div class="badge">✓ Insured & certified operators</div>
-          <div class="badge">✓ 24-hour quote turnaround</div>
+          <div class="badge" data-i18n="contact.badge1">✓ Free site assessment</div>
+          <div class="badge" data-i18n="contact.badge2">✓ No scaffolding costs</div>
+          <div class="badge" data-i18n="contact.badge3">✓ Insured &amp; certified operators</div>
+          <div class="badge" data-i18n="contact.badge4">✓ 24-hour quote turnaround</div>
         </div>
       </div>
 
@@ -161,46 +161,47 @@
         <!-- FORM FIELDS -->
         <div class="form-row">
           <div class="form-group">
-            <label for="firstName">First Name</label>
+            <label for="firstName" data-i18n="form.fname">First Name</label>
             <input type="text" id="firstName" name="first_name" placeholder="John" required />
           </div>
           <div class="form-group">
-            <label for="lastName">Last Name</label>
+            <label for="lastName" data-i18n="form.lname">Last Name</label>
             <input type="text" id="lastName" name="last_name" placeholder="Smith" required />
           </div>
         </div>
 
         <div class="form-group">
-          <label for="email">Email Address</label>
+          <label for="email" data-i18n="form.email">Email Address</label>
           <input type="email" id="email" name="email" placeholder="john@company.com" required />
         </div>
 
         <div class="form-group">
-          <label for="phone">Phone Number</label>
+          <label for="phone" data-i18n="form.phone">Phone Number</label>
           <input type="tel" id="phone" name="phone" placeholder="+253 77 879440" />
         </div>
 
         <div class="form-group">
-          <label for="buildingType">Building Type</label>
+          <label for="buildingType" data-i18n="form.btype">Building Type</label>
           <select id="buildingType" name="building_type" required>
-            <option value="" disabled selected>Select your building type</option>
-            <option value="commercial">Commercial Building</option>
-            <option value="industrial">Industrial Facility</option>
-            <option value="residential">Residential Complex</option>
-            <option value="infrastructure">Infrastructure / Bridge</option>
-            <option value="solar">Solar Installation</option>
-            <option value="other">Other</option>
+            <option value="" disabled selected data-i18n-opt="form.btype.ph">Select your building type</option>
+            <option value="commercial" data-i18n-opt="form.btype.commercial">Commercial Building</option>
+            <option value="industrial" data-i18n-opt="form.btype.industrial">Industrial Facility</option>
+            <option value="residential" data-i18n-opt="form.btype.residential">Residential Complex</option>
+            <option value="infrastructure" data-i18n-opt="form.btype.infrastructure">Infrastructure / Bridge</option>
+            <option value="solar" data-i18n-opt="form.btype.solar">Solar Installation</option>
+            <option value="Windmills" data-i18n-opt="windmills">Windmills</option>
+            <option value="other" data-i18n-opt="form.btype.other">Other</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label for="message">Project Details</label>
-          <textarea id="message" name="message" placeholder="Describe your property, size, and cleaning requirements..." rows="4" required></textarea>
+          <label for="message" data-i18n="form.message">Project Details</label>
+          <textarea id="message" name="message" data-i18n-ph="form.message.ph" placeholder="Describe your property, size, and cleaning requirements..." rows="4" required></textarea>
         </div>
 
         <!-- SUBMIT BUTTON -->
         <button type="submit" class="btn-form-submit">
-          <span class="btn-text">Request a Quote</span>
+          <span class="btn-text" data-i18n="form.submit">Request a Quote</span>
           <span class="btn-icon">→</span>
         </button>
 
