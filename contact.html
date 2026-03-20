@@ -10,27 +10,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .page-header {
-      padding: 160px 2rem 80px;
-      background: var(--blue-deep);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .page-header::before {
-      content: ''; position: absolute; top:0; left:0; right:0; bottom:0;
-      background: radial-gradient(circle at top right, rgba(111,168,220,0.15) 0%, transparent 60%);
-    }
-    .page-title {
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      font-weight: 900; color: white; margin-bottom: 1rem; position: relative;
-    }
-    .page-subtitle {
-       font-size: 1.25rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; position: relative;
-    }
     .contact-page-section {
-      padding: 6rem 2rem;
+      padding: 0;
       background: var(--blue-offwhite);
+    }
+    .contact-page-section .section-container {
+      padding-top: 3.5rem;
     }
     .contact-info-list { margin-top: 2rem; }
     .contact-info-list p {
@@ -59,13 +44,29 @@
       </div>
 
       <ul class="nav-links" role="list">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About Us</a></li>
-        <li><a href="index.html#capabilities" class="nav-link">Services</a></li>
-        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" class="nav-link" data-i18n="nav.about">About Us</a></li>
+        <li><a href="index.html#capabilities" class="nav-link" data-i18n="nav.services">Services</a></li>
+        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact Us</a></li>
       </ul>
 
-      <a href="contact.html" class="nav-cta" id="nav-cta-btn">Get a Quote</a>
+      <div class="lang-dropdown">
+        <button class="lang-flag-btn" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+          <span class="flag-current">&#x1F1EC;&#x1F1E7;</span>
+        </button>
+        <div class="lang-dropdown-menu">
+          <button class="lang-dropdown-item active" data-lang="en">
+            <span class="item-flag">&#x1F1EC;&#x1F1E7;</span>
+            <span>English</span>
+          </button>
+          <button class="lang-dropdown-item" data-lang="fr">
+            <span class="item-flag">&#x1F1EB;&#x1F1F7;</span>
+            <span>Fran&ccedil;ais</span>
+          </button>
+        </div>
+      </div>
+
+      <a href="contact.html" class="nav-cta" id="nav-cta-btn" data-i18n="nav.quote">Get a Quote</a>
 
       <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -77,26 +78,36 @@
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
     <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">✕</button>
     <ul class="mobile-links" role="list">
-      <li><a href="index.html" class="mobile-link">Home</a></li>
-      <li><a href="about.html" class="mobile-link">About Us</a></li>
-      <li><a href="index.html#capabilities" class="mobile-link">Services</a></li>
-      <li><a href="contact.html" class="mobile-link">Contact Us</a></li>
+      <li><a href="index.html" class="mobile-link" data-i18n="mob.home">Home</a></li>
+      <li><a href="about.html" class="mobile-link" data-i18n="mob.about">About Us</a></li>
+      <li><a href="index.html#capabilities" class="mobile-link" data-i18n="mob.services">Services</a></li>
+      <li><a href="contact.html" class="mobile-link" data-i18n="mob.contact">Contact Us</a></li>
     </ul>
-    <a href="contact.html" class="mobile-cta">Get a Quote</a>
+    <div class="mobile-lang-flags">
+      <button class="mobile-flag-btn active" data-lang="en">
+        <span class="item-flag">&#x1F1EC;&#x1F1E7;</span> EN
+      </button>
+      <button class="mobile-flag-btn" data-lang="fr">
+        <span class="item-flag">&#x1F1EB;&#x1F1F7;</span> FR
+      </button>
+    </div>
+    <a href="contact.html" class="mobile-cta" data-i18n="mob.quote">Get a Quote</a>
   </div>
 
   <header class="page-header">
-    <h1 class="page-title">Contact Us</h1>
-    <p class="page-subtitle">We're here to help you clean at scale.</p>
+    <div class="page-header-inner">
+      <h1 class="page-title" data-i18n="contact.page.title">Contact Us</h1>
+      <p class="page-subtitle" data-i18n="contact.page.subtitle">We're here to help you clean at scale.</p>
+    </div>
   </header>
 
   <section class="contact-page-section" aria-label="Request a quote">
     <div class="section-container">
       <div class="contact-grid">
         <div class="contact-left" data-animate="fade-up">
-          <div class="section-tag-dark">Get Started</div>
+          <div class="section-tag-dark" data-i18n="contact.tag">Get Started</div>
           <h2 class="section-title-dark">Ready to clean<br /><span class="blue-text">at scale?</span></h2>
-          <p class="contact-desc">Tell us about your project and we'll deploy a solution built around your needs and timeline.</p>
+          <p class="contact-desc" data-i18n="contact.desc">Tell us about your project and we'll deploy a solution built around your needs and timeline.</p>
           
           <div class="contact-info-list" style="margin-bottom: 2rem;">
             <p><strong>CEO:</strong> Allale Hassan Robleh</p>
@@ -113,49 +124,100 @@
             <div class="badge"><span class="badge-check">✓</span> 24-hour quote turnaround</div>
           </div>
         </div>
-        <form class="contact-form" id="quoteForm" novalidate aria-label="Quote request form" data-animate="fade-up" data-delay="100">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="firstName">First Name</label>
-              <input type="text" id="firstName" name="firstName" placeholder="John" required autocomplete="given-name" />
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" name="lastName" placeholder="Smith" required autocomplete="family-name" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="john@company.com" required autocomplete="email" />
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="+253 77 879440" autocomplete="tel" />
-          </div>
-          <div class="form-group">
-            <label for="buildingType">Building Type</label>
-            <select id="buildingType" name="buildingType">
-              <option value="" disabled selected>Select your building type</option>
-              <option value="commercial">Commercial Building</option>
-              <option value="industrial">Industrial Facility</option>
-              <option value="residential">Residential Complex</option>
-              <option value="infrastructure">Infrastructure / Bridge</option>
-              <option value="solar">Solar Installation</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Project Details</label>
-            <textarea id="message" name="message" placeholder="Describe your property, size, and cleaning requirements..." rows="4"></textarea>
-          </div>
-          <button type="submit" class="btn-form-submit" id="submit-quote-btn">
-            <span class="btn-text">Request a Quote</span>
-            <span class="btn-icon" aria-hidden="true">→</span>
-          </button>
-        </form>
+        <!-- ====== CONTACT / CTA SECTION ====== -->
+<section class="contact-section" id="contact" aria-label="Request a quote">
+  <div class="section-container">
+    <div class="contact-grid">
+      
+      <!-- LEFT CONTENT -->
+      <div class="contact-left">
+        <div class="section-tag-dark">Get Started</div>
+        <h2 class="section-title-dark">
+          Ready to clean<br /><span class="blue-text">at scale?</span>
+        </h2>
+        <p class="contact-desc">
+          Tell us about your project and we'll deploy a solution built around your needs and timeline.
+        </p>
+
+        <div class="contact-badges">
+          <div class="badge">✓ Free site assessment</div>
+          <div class="badge">✓ No scaffolding costs</div>
+          <div class="badge">✓ Insured & certified operators</div>
+          <div class="badge">✓ 24-hour quote turnaround</div>
+        </div>
       </div>
+
+      <!-- FORM -->
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+        <!-- 🔐 Web3Forms Config -->
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+        <input type="hidden" name="subject" value="New Quote Request - Sky Cleaner">
+        <input type="hidden" name="from_name" value="Sky Cleaner Website">
+
+        <!-- Optional Full Name -->
+        <input type="hidden" name="name" id="fullName">
+
+        <!-- FORM FIELDS -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="first_name" placeholder="John" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="last_name" placeholder="Smith" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="john@company.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+253 77 879440" />
+        </div>
+
+        <div class="form-group">
+          <label for="buildingType">Building Type</label>
+          <select id="buildingType" name="building_type" required>
+            <option value="" disabled selected>Select your building type</option>
+            <option value="commercial">Commercial Building</option>
+            <option value="industrial">Industrial Facility</option>
+            <option value="residential">Residential Complex</option>
+            <option value="infrastructure">Infrastructure / Bridge</option>
+            <option value="solar">Solar Installation</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Project Details</label>
+          <textarea id="message" name="message" placeholder="Describe your property, size, and cleaning requirements..." rows="4" required></textarea>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <button type="submit" class="btn-form-submit">
+          <span class="btn-text">Request a Quote</span>
+          <span class="btn-icon">→</span>
+        </button>
+
+      </form>
     </div>
-  </section>
+  </div>  
+</div>
+</section>
+
+<!-- 🔧 JS for full name -->
+<script>
+document.querySelector(".contact-form").addEventListener("submit", function() {
+  const first = document.getElementById("firstName").value;
+  const last = document.getElementById("lastName").value;
+  document.getElementById("fullName").value = first + " " + last;
+});
+</script>
 
   <!-- ====== FOOTER ====== -->
   <footer class="site-footer" aria-label="Site footer">
@@ -175,11 +237,11 @@
           </svg>
           <span>Sky Cleaner Services</span>
         </div>
-        <p class="footer-tagline">Cleaning at a higher standard.</p>
+        <p class="footer-tagline" data-i18n="footer.tagline">Cleaning at a higher standard.</p>
       </div>
       <div class="footer-links-cols">
         <div class="footer-col">
-          <h4>Services</h4>
+          <h4 data-i18n="footer.services">Services</h4>
           <ul role="list">
             <li><a href="index.html#capabilities">High-Rise Window Cleaning</a></li>
             <li><a href="index.html#capabilities">Building & Facade Restoration</a></li>
@@ -188,7 +250,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Company</h4>
+          <h4 data-i18n="footer.company">Company</h4>
           <ul role="list">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -196,7 +258,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Contact Information</h4>
+          <h4 data-i18n="footer.contact_col">Contact Information</h4>
           <ul role="list">
             <li style="color:var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">CEO: Allale Hassan Robleh</li>
             <li style="color:var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">Djibouti City, Djibouti</li>
@@ -208,16 +270,16 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Sky Cleaner Services. All rights reserved.</p>
+      <p data-i18n="footer.rights">© 2026 Sky Cleaner Services. All rights reserved.</p>
       <div class="footer-legal">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
       </div>
     </div>
   </footer>
 
   <div class="toast" id="formToast" role="alert" aria-live="polite"></div>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="lang.js"></script>
   <script src="main.js"></script>
   <script src="mail.js"></script>
 </body>

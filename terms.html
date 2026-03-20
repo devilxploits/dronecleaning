@@ -9,23 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .page-header {
-      padding: 160px 2rem 80px;
-      background: var(--blue-deep);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .page-header::before {
-      content: ''; position: absolute; top:0; left:0; right:0; bottom:0;
-      background: radial-gradient(circle at top right, rgba(111,168,220,0.15) 0%, transparent 60%);
-    }
-    .page-title {
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      font-weight: 900; color: white; margin-bottom: 1rem; position: relative;
-    }
+
     .content-section {
-      padding: 6rem 2rem; max-width: 900px; margin: 0 auto;
+      padding: 3.5rem 2rem 6rem; max-width: 900px; margin: 0 auto;
     }
     .content-block { margin-bottom: 2rem; font-size: 1.05rem; line-height: 1.8; color: var(--text-dark); }
     .content-block h2 { font-size: 1.75rem; color: var(--blue-deep); margin-bottom: 1rem; }
@@ -53,13 +39,29 @@
       </div>
 
       <ul class="nav-links" role="list">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About Us</a></li>
-        <li><a href="index.html#capabilities" class="nav-link">Services</a></li>
-        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" class="nav-link" data-i18n="nav.about">About Us</a></li>
+        <li><a href="index.html#capabilities" class="nav-link" data-i18n="nav.services">Services</a></li>
+        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact Us</a></li>
       </ul>
 
-      <a href="contact.html" class="nav-cta" id="nav-cta-btn">Get a Quote</a>
+      <div class="lang-dropdown">
+        <button class="lang-flag-btn" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+          <span class="flag-current">&#x1F1EC;&#x1F1E7;</span>
+        </button>
+        <div class="lang-dropdown-menu">
+          <button class="lang-dropdown-item active" data-lang="en">
+            <span class="item-flag">&#x1F1EC;&#x1F1E7;</span>
+            <span>English</span>
+          </button>
+          <button class="lang-dropdown-item" data-lang="fr">
+            <span class="item-flag">&#x1F1EB;&#x1F1F7;</span>
+            <span>Fran&ccedil;ais</span>
+          </button>
+        </div>
+      </div>
+
+      <a href="contact.html" class="nav-cta" id="nav-cta-btn" data-i18n="nav.quote">Get a Quote</a>
 
       <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -71,16 +73,25 @@
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
     <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">✕</button>
     <ul class="mobile-links" role="list">
-      <li><a href="index.html" class="mobile-link">Home</a></li>
-      <li><a href="about.html" class="mobile-link">About Us</a></li>
-      <li><a href="index.html#capabilities" class="mobile-link">Services</a></li>
-      <li><a href="contact.html" class="mobile-link">Contact Us</a></li>
+      <li><a href="index.html" class="mobile-link" data-i18n="mob.home">Home</a></li>
+      <li><a href="about.html" class="mobile-link" data-i18n="mob.about">About Us</a></li>
+      <li><a href="index.html#capabilities" class="mobile-link" data-i18n="mob.services">Services</a></li>
+      <li><a href="contact.html" class="mobile-link" data-i18n="mob.contact">Contact Us</a></li>
     </ul>
-    <a href="contact.html" class="mobile-cta">Get a Quote</a>
+    <div class="mobile-lang-flags">
+      <button class="mobile-flag-btn active" data-lang="en">
+        <span class="item-flag">&#x1F1EC;&#x1F1E7;</span> EN
+      </button>
+      <button class="mobile-flag-btn" data-lang="fr">
+        <span class="item-flag">&#x1F1EB;&#x1F1F7;</span> FR
+      </button>
+    </div>
+    <a href="contact.html" class="mobile-cta" data-i18n="mob.quote">Get a Quote</a>
   </div>
 
   <header class="page-header">
-    <h1 class="page-title">Terms & Conditions</h1>
+    <div class="page-header-inner">
+      <h1 class="page-title">Terms & Conditions</h1>
   </header>
 
   <main class="content-section">
@@ -112,11 +123,11 @@
           </svg>
           <span>Sky Cleaner Services</span>
         </div>
-        <p class="footer-tagline">Cleaning at a higher standard.</p>
+        <p class="footer-tagline" data-i18n="footer.tagline">Cleaning at a higher standard.</p>
       </div>
       <div class="footer-links-cols">
         <div class="footer-col">
-          <h4>Services</h4>
+          <h4 data-i18n="footer.services">Services</h4>
           <ul role="list">
             <li><a href="index.html#capabilities">High-Rise Window Cleaning</a></li>
             <li><a href="index.html#capabilities">Building & Facade Restoration</a></li>
@@ -125,7 +136,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Company</h4>
+          <h4 data-i18n="footer.company">Company</h4>
           <ul role="list">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -133,7 +144,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Contact Information</h4>
+          <h4 data-i18n="footer.contact_col">Contact Information</h4>
           <ul role="list">
             <li style="color:var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">CEO: Allale Hassan Robleh</li>
             <li style="color:var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">Djibouti City, Djibouti</li>
@@ -145,14 +156,15 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Sky Cleaner Services. All rights reserved.</p>
+      <p data-i18n="footer.rights">© 2026 Sky Cleaner Services. All rights reserved.</p>
       <div class="footer-legal">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
       </div>
     </div>
   </footer>
 
+  <script src="lang.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

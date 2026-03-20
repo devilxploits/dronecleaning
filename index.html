@@ -31,13 +31,29 @@
       </div>
 
       <ul class="nav-links" role="list">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About Us</a></li>
-        <li><a href="index.html#capabilities" class="nav-link">Services</a></li>
-        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" class="nav-link" data-i18n="nav.about">About Us</a></li>
+        <li><a href="index.html#capabilities" class="nav-link" data-i18n="nav.services">Services</a></li>
+        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact Us</a></li>
       </ul>
 
-      <a href="#contact" class="nav-cta" id="nav-cta-btn">Get a Quote</a>
+      <div class="lang-dropdown">
+        <button class="lang-flag-btn" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+          <span class="flag-current">&#x1F1EC;&#x1F1E7;</span>
+        </button>
+        <div class="lang-dropdown-menu">
+          <button class="lang-dropdown-item active" data-lang="en">
+            <span class="item-flag">&#x1F1EC;&#x1F1E7;</span>
+            <span>English</span>
+          </button>
+          <button class="lang-dropdown-item" data-lang="fr">
+            <span class="item-flag">&#x1F1EB;&#x1F1F7;</span>
+            <span>Fran&ccedil;ais</span>
+          </button>
+        </div>
+      </div>
+
+      <a href="#contact" class="nav-cta" id="nav-cta-btn" data-i18n="nav.quote">Get a Quote</a>
 
       <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -49,12 +65,20 @@
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
     <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">✕</button>
     <ul class="mobile-links" role="list">
-      <li><a href="index.html" class="mobile-link">Home</a></li>
-      <li><a href="about.html" class="mobile-link">About Us</a></li>
-      <li><a href="index.html#capabilities" class="mobile-link">Services</a></li>
-      <li><a href="contact.html" class="mobile-link">Contact Us</a></li>
+      <li><a href="index.html" class="mobile-link" data-i18n="mob.home">Home</a></li>
+      <li><a href="about.html" class="mobile-link" data-i18n="mob.about">About Us</a></li>
+      <li><a href="index.html#capabilities" class="mobile-link" data-i18n="mob.services">Services</a></li>
+      <li><a href="contact.html" class="mobile-link" data-i18n="mob.contact">Contact Us</a></li>
     </ul>
-    <a href="#contact" class="mobile-cta">Get a Quote</a>
+    <div class="mobile-lang-flags">
+      <button class="mobile-flag-btn active" data-lang="en">
+        <span class="item-flag">&#x1F1EC;&#x1F1E7;</span> EN
+      </button>
+      <button class="mobile-flag-btn" data-lang="fr">
+        <span class="item-flag">&#x1F1EB;&#x1F1F7;</span> FR
+      </button>
+    </div>
+    <a href="#contact" class="mobile-cta" data-i18n="mob.quote">Get a Quote</a>
   </div>
 
   <!-- ====== HERO SECTION ====== -->
@@ -79,36 +103,41 @@
       <!-- Top badge -->
       <div class="hero-badge" data-animate="fade-up" data-delay="0">
         <span class="badge-dot"></span>
-        <span>Advanced Drone Cleaning Technology</span>
+        <span data-i18n="hero.badge">Advanced Drone Cleaning Technology</span>
         <span class="badge-tag">2026</span>
       </div>
+      
+      
+<div class="gov-badge" data-animate="fade-up" data-delay="50" data-i18n="hero.gov">
+  🇩🇯 Authorized by the Government of Djibouti
+</div>
+
 
       <!-- Main heading -->
       <h1 class="hero-title" data-animate="fade-up" data-delay="100">
-        <span class="title-line">Cleaning at a</span>
-        <span class="title-line title-accent">Higher Standard</span>
+        <span class="title-line" data-i18n="hero.title1">Cleaning at a</span>
+        <span class="title-line title-accent" data-i18n="hero.title2">Higher Standard</span>
       </h1>
 
       <!-- Sub-headline -->
-      <p class="hero-tagline" data-animate="fade-up" data-delay="200">
+      <p class="hero-tagline" data-animate="fade-up" data-delay="200" data-i18n="hero.tagline">
         Advanced Drone-Powered Exterior Cleaning Solutions
       </p>
 
       <!-- Description -->
-      <p class="hero-description" data-animate="fade-up" data-delay="300">
-        Sky Cleaner Services provides innovative, safe, and efficient<br class="br-desktop" />
-        cleaning solutions for high-rise buildings, industrial facilities, and renewable energy infrastructure in Djibouti.
+      <p class="hero-description" data-animate="fade-up" data-delay="300" data-i18n="hero.desc">
+        Sky Cleaner Services provides innovative, safe, and efficient cleaning solutions for high-rise buildings, industrial facilities, and renewable energy infrastructure in Djibouti & surrounding areas.
       </p>
 
       <!-- CTA buttons -->
       <div class="hero-actions" data-animate="fade-up" data-delay="400">
         <a href="#contact" class="btn-primary" id="hero-quote-btn">
-          <span>Request a Quote</span>
+          <span data-i18n="hero.cta1">Request a Quote</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <a href="#technology" class="btn-ghost-hero">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 5.5L10 8l-3.5 2.5" fill="currentColor"/></svg>
-          <span>Watch Technology</span>
+          <span data-i18n="hero.cta2">Watch Technology</span>
         </a>
       </div>
 
@@ -116,17 +145,17 @@
       <div class="hero-trust" data-animate="fade-up" data-delay="500">
         <div class="trust-item">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1l2 4.5L15 6l-3.5 3.5.8 5L8 12l-4.3 2.5.8-5L1 6l5-.5L8 1z" fill="#6DBE45"/></svg>
-          <span>500+ Projects Delivered</span>
+          <span data-i18n="hero.trust1">500+ Projects Delivered</span>
         </div>
         <div class="trust-sep" aria-hidden="true"></div>
         <div class="trust-item">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2l1.5 3 3.5.5-2.5 2.5.6 3.5L8 10l-3.1 1.5.6-3.5L3 5.5l3.5-.5L8 2z" fill="#6DBE45"/></svg>
-          <span>99% Safety Record</span>
+          <span data-i18n="hero.trust2">99% Safety Record</span>
         </div>
         <div class="trust-sep" aria-hidden="true"></div>
         <div class="trust-item">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1C4.13 1 1 4.13 1 8s3.13 7 7 7 7-3.13 7-7-3.13-7-7-7zm0 12.6C4.9 13.6 2.4 11.1 2.4 8c0-3.1 2.5-5.6 5.6-5.6 3.1 0 5.6 2.5 5.6 5.6 0 3.1-2.5 5.6-5.6 5.6z" fill="#6DBE45"/><path d="M8 5v4l2.5 1.5" stroke="#6DBE45" stroke-width="1.2" stroke-linecap="round"/></svg>
-          <span>24/7 Operational Support</span>
+          <span data-i18n="hero.trust3">24/7 Operational Support</span>
         </div>
       </div>
 
@@ -169,40 +198,40 @@
   <section class="tech-section" id="technology" aria-label="Technology">
     <div class="section-container">
       <div class="section-header-centered">
-        <div class="section-tag">Technology</div>
-        <h2 class="section-title-white">Engineered for<br /><span class="gradient-text">precision cleaning.</span></h2>
-        <p class="section-desc-white">Our drones combine aerospace-grade engineering with industrial cleaning systems to deliver unmatched results at any height.</p>
+        <div class="section-tag" data-i18n="tech.tag">Technology</div>
+        <h2 class="section-title-white" data-i18n-html="tech.title">Engineered for<br /><span class="gradient-text">precision cleaning.</span></h2>
+        <p class="section-desc-white" data-i18n="tech.desc">Our drones combine aerospace-grade engineering with industrial cleaning systems to deliver unmatched results at any height.</p>
       </div>
       <div class="tech-grid">
         <div class="tech-card" data-animate="fade-up">
           <div class="tech-card-icon">⚙️</div>
-          <h3>Advanced Pressure Systems</h3>
-          <p>Deliver consistent, powerful results on any surface — from glass facades to industrial steel panels.</p>
+          <h3 data-i18n="tech.c1.title">Advanced Pressure Systems</h3>
+          <p data-i18n="tech.c1.desc">Deliver consistent, powerful results on any surface — from glass facades to industrial steel panels.</p>
         </div>
         <div class="tech-card" data-animate="fade-up" data-delay="100">
           <div class="tech-card-icon">🎯</div>
-          <h3>AI-Assisted Navigation</h3>
-          <p>Smart control systems ensure precision positioning and safety at any altitude, in any weather condition.</p>
+          <h3 data-i18n="tech.c2.title">Smart Detection Assisted</h3>
+          <p data-i18n="tech.c2.desc">Smart control systems ensure precision positioning and safety at any altitude, in any weather condition also radar too protect from safe distance.</p>
         </div>
         <div class="tech-card" data-animate="fade-up" data-delay="200">
           <div class="tech-card-icon">💧</div>
-          <h3>Optimized Water Usage</h3>
-          <p>High-efficiency nozzles achieve maximum coverage with up to 40% less water than traditional methods.</p>
+          <h3 data-i18n="tech.c3.title">Optimized Water Usage</h3>
+          <p data-i18n="tech.c3.desc">High-efficiency nozzles achieve maximum coverage with up to 40% less water than traditional methods.</p>
         </div>
         <div class="tech-card" data-animate="fade-up" data-delay="300">
           <div class="tech-card-icon">📡</div>
-          <h3>Live Sensor Feedback</h3>
-          <p>Real-time camera and sensor arrays monitor surface cleanliness and adjust pressure dynamically.</p>
+          <h3 data-i18n="tech.c4.title">Live Sensor Feedback</h3>
+          <p data-i18n="tech.c4.desc">Real-time camera and sensor arrays monitor surface cleanliness and adjust pressure dynamically.</p>
         </div>
         <div class="tech-card" data-animate="fade-up" data-delay="400">
           <div class="tech-card-icon">🔩</div>
-          <h3>Modular Architecture</h3>
-          <p>Swap cleaning heads in minutes. Designed for efficiency across complex structures and surface types.</p>
+          <h3 data-i18n="tech.c5.title">Modular Architecture</h3>
+          <p data-i18n="tech.c5.desc">Swap cleaning heads in minutes. Designed for efficiency across complex structures and surface types.</p>
         </div>
         <div class="tech-card" data-animate="fade-up" data-delay="500">
           <div class="tech-card-icon">🛡️</div>
-          <h3>Zero Human Exposure</h3>
-          <p>Fully remote operations eliminate risk to workers on high-rise structures and hazardous environments.</p>
+          <h3 data-i18n="tech.c6.title">Zero Human Exposure</h3>
+          <p data-i18n="tech.c6.desc">Fully remote operations eliminate risk to workers on high-rise structures and hazardous environments.</p>
         </div>
       </div>
     </div>
@@ -295,7 +324,7 @@
           <p class="zz-body">Our drones eliminate the need for scaffolding, rope access, or cherry pickers — cutting setup costs by up to 70% and removing all fall risks for your crew.</p>
           <ul class="zz-bullets">
             <li><span class="zz-bullet-dot"></span>Deploy on any facade in under 30 minutes</li>
-            <li><span class="zz-bullet-dot"></span>Certified for buildings up to 300m</li>
+            <li><span class="zz-bullet-dot"></span>Certified for buildings up to 100m</li>
             <li><span class="zz-bullet-dot"></span>No disruption to building occupants</li>
           </ul>
           <a href="#contact" class="zz-cta">Get a Free Assessment →</a>
@@ -418,6 +447,11 @@
           <h3>Hospitality</h3>
           <p>Hotels and resorts maintaining pristine exterior appearances with minimal operational disruption.</p>
         </div>
+        <div class="industry-card">
+          <div class="industry-icon">❄️</div>
+          <h3>WindMills</h3>
+          <p>Efficient drone cleaning for wind turbines, enhancing performance, safety, and operational lifespan without interrupting energy production.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -502,74 +536,128 @@
           <h3>Live Monitoring</h3>
           <p>Real-time sensor data and camera feeds ensure quality control throughout the operation.</p>
         </div>
-        <div class="process-connector" aria-hidden="true"></div>
-        <div class="process-step">
-          <div class="step-number">04</div>
-          <h3>Completion Report</h3>
-          <p>You receive a full digital report with before/after imagery and coverage analytics.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== VIDEO SECTION ====== -->
+  <section class="video-section" id="in-action" aria-label="See it in action">
+    <div class="section-container">
+      <div class="section-header-centered">
+        <div class="section-tag" data-i18n="video.tag">See It In Action</div>
+        <h2 class="section-title-white" data-i18n-html="video.title">Watch our drones<br /><span class="gradient-text">clean at scale.</span></h2>
+        <p class="section-desc-white" data-i18n="video.desc">Real operations, real results — see exactly how Sky Cleaner Services transforms buildings across Djibouti.</p>
+      </div>
+      <div class="video-wrapper">
+        <div class="video-glow"></div>
+        <div class="video-frame">
+          <iframe
+            id="langVideo"
+            src="https://www.youtube.com/embed/M3lTujQ5CQQ?rel=0&modestbranding=1&color=white"
+            title="Sky Cleaner Services — Drone Cleaning"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ====== CONTACT / CTA SECTION ====== -->
-  <section class="contact-section" id="contact" aria-label="Request a quote">
-    <div class="section-container">
-      <div class="contact-grid">
-        <div class="contact-left">
-          <div class="section-tag-dark">Get Started</div>
-          <h2 class="section-title-dark">Ready to clean<br /><span class="blue-text">at scale?</span></h2>
-          <p class="contact-desc">Tell us about your project and we'll deploy a solution built around your needs and timeline.</p>
-          <div class="contact-badges">
-            <div class="badge"><span class="badge-check">✓</span> Free site assessment</div>
-            <div class="badge"><span class="badge-check">✓</span> No scaffolding costs</div>
-            <div class="badge"><span class="badge-check">✓</span> Insured &amp; certified operators</div>
-            <div class="badge"><span class="badge-check">✓</span> 24-hour quote turnaround</div>
+<section class="contact-section" id="contact" aria-label="Request a quote">
+  <div class="section-container">
+    <div class="contact-grid">
+      
+      <!-- LEFT CONTENT -->
+      <div class="contact-left">
+        <div class="section-tag-dark">Get Started</div>
+        <h2 class="section-title-dark">
+          Ready to clean<br /><span class="blue-text">at scale?</span>
+        </h2>
+        <p class="contact-desc">
+          Tell us about your project and we'll deploy a solution built around your needs and timeline.
+        </p>
+
+        <div class="contact-badges">
+          <div class="badge"> Free site assessment</div>
+          <div class="badge"> No scaffolding costs</div>
+          <div class="badge"> Insured & certified operators</div>
+          <div class="badge"> 24-hour quote turnaround</div>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+        <!--  Web3Forms Config -->
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+        <input type="hidden" name="subject" value="New Quote Request - Sky Cleaner">
+        <input type="hidden" name="from_name" value="Sky Cleaner Website">
+
+        <!-- Optional Full Name -->
+        <input type="hidden" name="name" id="fullName">
+
+        <!-- FORM FIELDS -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="first_name" placeholder="John" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="last_name" placeholder="Smith" required />
           </div>
         </div>
-        <form class="contact-form" id="quoteForm" novalidate aria-label="Quote request form">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="firstName">First Name</label>
-              <input type="text" id="firstName" name="firstName" placeholder="John" required autocomplete="given-name" />
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" name="lastName" placeholder="Smith" required autocomplete="family-name" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="john@company.com" required autocomplete="email" />
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="+253 77 879440" autocomplete="tel" />
-          </div>
-          <div class="form-group">
-            <label for="buildingType">Building Type</label>
-            <select id="buildingType" name="buildingType">
-              <option value="" disabled selected>Select your building type</option>
-              <option value="commercial">Commercial Building</option>
-              <option value="industrial">Industrial Facility</option>
-              <option value="residential">Residential Complex</option>
-              <option value="infrastructure">Infrastructure / Bridge</option>
-              <option value="solar">Solar Installation</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Project Details</label>
-            <textarea id="message" name="message" placeholder="Describe your property, size, and cleaning requirements..." rows="4"></textarea>
-          </div>
-          <button type="submit" class="btn-form-submit" id="submit-quote-btn">
-            <span class="btn-text">Request a Quote</span>
-            <span class="btn-icon" aria-hidden="true">→</span>
-          </button>
-        </form>
-      </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="john@company.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+253 77 879440" />
+        </div>
+
+        <div class="form-group">
+          <label for="buildingType">Building Type</label>
+          <select id="buildingType" name="building_type" required>
+            <option value="" disabled selected>Select your building type</option>
+            <option value="commercial">Commercial Building</option>
+            <option value="industrial">Industrial Facility</option>
+            <option value="residential">Residential Complex</option>
+            <option value="infrastructure">Infrastructure / Bridge</option>
+            <option value="solar">Solar Installation</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Project Details</label>
+          <textarea id="message" name="message" placeholder="Describe your property, size, and cleaning requirements..." rows="4" required></textarea>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <button type="submit" class="btn-form-submit">
+          <span class="btn-text">Request a Quote</span>
+          <span class="btn-icon"></span>
+        </button>
+
+      </form>
     </div>
-  </section>
+  </div>
+</section>
+
+<!--  JS for full name -->
+<script>
+document.querySelector(".contact-form").addEventListener("submit", function() {
+  const first = document.getElementById("firstName").value;
+  const last = document.getElementById("lastName").value;
+  document.getElementById("fullName").value = first + " " + last;
+});
+</script>
 
   <!-- ====== FOOTER ====== -->
   <footer class="site-footer" aria-label="Site footer">
@@ -589,49 +677,49 @@
           </svg>
           <span>Sky Cleaner Services</span>
         </div>
-        <p class="footer-tagline">Cleaning at a higher standard.</p>
+        <p class="footer-tagline" data-i18n="footer.tagline">Cleaning at a higher standard.</p>
       </div>
       <div class="footer-links-cols">
         <div class="footer-col">
-          <h4>Services</h4>
+          <h4 data-i18n="footer.services">Services</h4>
           <ul role="list">
-            <li><a href="index.html#capabilities">High-Rise Window Cleaning</a></li>
-            <li><a href="index.html#capabilities">Building & Facade Restoration</a></li>
-            <li><a href="index.html#capabilities">Fleet Cleaning</a></li>
-            <li><a href="index.html#capabilities">Wind & Solar Cleaning</a></li>
+            <li><a href="index.html#capabilities" data-i18n="footer.svc1">High-Rise Window Cleaning</a></li>
+            <li><a href="index.html#capabilities" data-i18n="footer.svc2">Building & Facade Restoration</a></li>
+            <li><a href="index.html#capabilities" data-i18n="footer.svc3">Fleet Cleaning</a></li>
+            <li><a href="index.html#capabilities" data-i18n="footer.svc4">Wind & Solar Cleaning</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Company</h4>
+          <h4 data-i18n="footer.company">Company</h4>
           <ul role="list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Contact Information</h4>
+          <h4 data-i18n="footer.contact_col">Contact Information</h4>
           <ul role="list">
-            <li style="color:var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">CEO: Allale Hassan Robleh</li>
+            <li style="color:var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;" data-i18n="footer.ceo">CEO: Allale Hassan Robleh</li>
             <li style="color:var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">Djibouti City, Djibouti</li>
             <li><a href="mailto:skycleaners.dj@gmail.com">skycleaners.dj@gmail.com</a></li>
-            <li><a href="tel:77879440">Phone: 77 879440</a></li>
+            <li><a href="tel:77879440" data-i18n="footer.phone">Phone: 77 879440</a></li>
             <li><a href="https://skycleanersservices.com">skycleanersservices.com</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Sky Cleaner Services. All rights reserved.</p>
+      <p data-i18n="footer.rights">© 2026 Sky Cleaner Services. All rights reserved.</p>
       <div class="footer-legal">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
       </div>
     </div>
   </footer>
 
   <div class="toast" id="formToast" role="alert" aria-live="polite"></div>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="lang.js"></script>
   <script src="main.js"></script>
   <script src="mail.js"></script>
 </body>

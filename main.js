@@ -202,44 +202,7 @@ function setupMobileNav() {
 }
 
 
-/* ============================================================
-   CONTACT FORM
-   ============================================================ */
-function setupContactForm() {
-  const form  = document.getElementById('quoteForm');
-  const toast = document.getElementById('formToast');
-
-  function showToast(msg, isError = false) {
-    toast.textContent = msg;
-    toast.style.background = isError ? '#3a1a1a' : '#1a3a1a';
-    toast.style.color      = isError ? '#f08080' : '#7ee87e';
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 4200);
-  }
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const firstName = form.firstName.value.trim();
-    const email     = form.email.value.trim();
-    if (!firstName)                     { showToast('Please enter your first name.', true); return; }
-    if (!email || !email.includes('@')) { showToast('Please enter a valid email.',   true); return; }
-
-    const btn     = form.querySelector('.btn-form-submit');
-    const btnText = btn.querySelector('.btn-text');
-    const btnIcon = btn.querySelector('.btn-icon');
-    btn.disabled = true;
-    btnText.textContent = 'Sending…';
-    btnIcon.textContent = '⏳';
-
-    setTimeout(() => {
-      form.reset();
-      btn.disabled = false;
-      btnText.textContent = 'Request a Quote';
-      btnIcon.textContent = '→';
-      showToast('✓ Quote request submitted! We\'ll be in touch within 24 hours.');
-    }, 1600);
-  });
-}
+/* Contact form is handled by lang.js (with translation support) */
 
 
 /* ============================================================
@@ -371,6 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupSmoothAnchors();
   setupZigzagAnimations();
   setupCarousel();
+  /* Note: contact form handled by lang.js */
 });
 
 
