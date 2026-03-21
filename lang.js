@@ -536,8 +536,8 @@ function applyTranslations() {
   const langVideo = document.getElementById('langVideo');
   if (langVideo) {
     const videoSrc = currentLang === 'fr'
-      ? 'https://www.youtube.com/embed/SEDm-7ESSVQ?rel=0&modestbranding=1&color=white'
-      : 'https://www.youtube.com/embed/M3lTujQ5CQQ?rel=0&modestbranding=1&color=white';
+      ? 'https://www.youtube.com/embed/ZHhWY_SeY2w?rel=0&modestbranding=1&color=white'
+      : 'https://www.youtube.com/embed/7LxeRTdXVPE?rel=0&modestbranding=1&color=white';
     if (langVideo.src !== videoSrc) langVideo.src = videoSrc;
   }
 
