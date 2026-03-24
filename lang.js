@@ -40,6 +40,7 @@ const TRANSLATIONS = {
     /* ── Hero ── */
     'hero.badge':   'Advanced Drone Cleaning Technology',
     'hero.gov':     '🇩🇯 Authorized by the Government of Djibouti',
+    'hero.gov.sub': 'The company is in compliance with regulations of the republic of Djibouti.',
     'hero.title1':  'Cleaning at a',
     'hero.title2':  'Higher Standard',
     'hero.tagline': 'Advanced Drone-Powered Exterior Cleaning Solutions',
@@ -222,6 +223,8 @@ const TRANSLATIONS = {
     'about.s4.li4':   'Advanced drone technology',
     'about.s4.li5':   'Professional and reliable service',
     'about.s4.li6':   'Environmentally responsible cleaning solutions',
+    'about.stat.gov':     '🇩🇯 Authorized by the Government of Djibouti',
+    'about.stat.gov.sub': 'The company is in compliance with regulations of the Republic of Djibouti.',
 
     /* ── Contact page header ── */
     'contact.page.title':    'Contact Us',
@@ -284,6 +287,7 @@ const TRANSLATIONS = {
     /* ── Hero ── */
     'hero.badge':   'Technologie Avancée de Nettoyage par Drone',
     'hero.gov':     '🇩🇯 Autorisé par le Gouvernement de Djibouti',
+    'hero.gov.sub': 'L\'entreprise est en conformité avec les réglementations de la République de Djibouti.',
     'hero.title1':  'Nettoyage à un',
     'hero.title2':  'Niveau Supérieur',
     'hero.tagline': 'Solutions Avancées de Nettoyage Extérieur par Drone',
@@ -466,6 +470,8 @@ const TRANSLATIONS = {
     'about.s4.li4':   'Technologie drone avancée',
     'about.s4.li5':   'Service professionnel et fiable',
     'about.s4.li6':   'Solutions de nettoyage respectueuses de l\'environnement',
+    'about.stat.gov':     '🇩🇯 Autorisé par le Gouvernement de Djibouti',
+    'about.stat.gov.sub': 'L\'entreprise est en conformité avec les réglementations de la République de Djibouti.',
 
     /* ── Contact page header ── */
     'contact.page.title':    'Nous Contacter',
@@ -536,7 +542,7 @@ function applyTranslations() {
   const langVideo = document.getElementById('langVideo');
   if (langVideo) {
     const videoSrc = currentLang === 'fr'
-      ? 'https://www.youtube.com/embed/ZHhWY_SeY2w?rel=0&modestbranding=1&color=white'
+      ? 'https://www.youtube.com/embed/ysJCpYYwZWQ?rel=0&modestbranding=1&color=white'
       : 'https://www.youtube.com/embed/7LxeRTdXVPE?rel=0&modestbranding=1&color=white';
     if (langVideo.src !== videoSrc) langVideo.src = videoSrc;
   }
