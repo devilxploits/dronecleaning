@@ -535,16 +535,34 @@ function applyTranslations() {
     el.textContent = t(el.dataset.i18nOpt);
   });
 
+  /* href switching for language-specific links (e.g. Watch Video EN only) */
+  document.querySelectorAll('[data-href-en]').forEach(el => {
+    const enHref = el.dataset.hrefEn;
+    const frHref = el.dataset.hrefFr || enHref;
+    el.href = currentLang === 'en' ? enHref : frHref;
+    if (currentLang === 'en') {
+      el.setAttribute('target', '_blank');
+      el.setAttribute('rel', 'noopener noreferrer');
+    } else {
+      el.removeAttribute('target');
+      el.removeAttribute('rel');
+    }
+  });
+
   /* Update <html lang=""> attribute */
   document.documentElement.lang = currentLang;
 
   /* Switch video src based on language */
+  const videoSection = document.getElementById('in-action');
   const langVideo = document.getElementById('langVideo');
-  if (langVideo) {
-    const videoSrc = currentLang === 'fr'
-      ? 'https://www.youtube.com/embed/ysJCpYYwZWQ?rel=0&modestbranding=1&color=white'
-      : 'https://www.youtube.com/embed/7LxeRTdXVPE?rel=0&modestbranding=1&color=white';
-    if (langVideo.src !== videoSrc) langVideo.src = videoSrc;
+  if (videoSection) {
+    videoSection.style.display = '';
+    if (langVideo) {
+      const videoSrc = currentLang === 'fr'
+        ? 'https://www.youtube.com/embed/ysJCpYYwZWQ?si=n7fNIlEfHJ4sMKmB'
+        : 'https://www.youtube.com/embed/xHbUwQtd4d0?si=E3XWIEJpnjjDUMbV';
+      if (langVideo.src !== videoSrc) langVideo.src = videoSrc;
+    }
   }
 
   /* Sync flag button icon */
