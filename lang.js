@@ -559,8 +559,8 @@ function applyTranslations() {
     videoSection.style.display = '';
     if (langVideo) {
       const videoSrc = currentLang === 'fr'
-        ? 'https://www.youtube.com/embed/ysJCpYYwZWQ?si=n7fNIlEfHJ4sMKmB'
-        : 'https://www.youtube.com/embed/xHbUwQtd4d0?si=E3XWIEJpnjjDUMbV';
+        ? 'https://www.youtube.com/embed/-xVyBg-5q7g?feature=shared'
+        : 'https://www.youtube.com/embed/FR9GXMKJp4g?si=fHIbIYwD9pu2AVwp';
       if (langVideo.src !== videoSrc) langVideo.src = videoSrc;
     }
   }
