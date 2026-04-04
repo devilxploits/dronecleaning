@@ -136,78 +136,62 @@
         </div>
       </div>
 
-      <!-- FORM -->
-      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <!-- ====== CONTACT FORM (EMAILJS) ====== -->
+<form class="contact-form" id="contactForm">
 
-        <!-- 🔐 Web3Forms Config -->
-        <input type="hidden" name="access_key" value="7d46b599-e468-4ccb-9d91-157104ecfc32">
-        <input type="hidden" name="subject" value="New Quote Request - Sky Cleaner">
-        <input type="hidden" name="from_name" value="Sky Cleaner Website">
-
-        <!-- Optional Full Name -->
-        <input type="hidden" name="name" id="fullName">
-
-        <!-- FORM FIELDS -->
-        <div class="form-row">
-          <div class="form-group">
-            <label for="firstName" data-i18n="form.fname">First Name</label>
-            <input type="text" id="firstName" name="first_name" placeholder="John" required />
-          </div>
-          <div class="form-group">
-            <label for="lastName" data-i18n="form.lname">Last Name</label>
-            <input type="text" id="lastName" name="last_name" placeholder="Smith" required />
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="email" data-i18n="form.email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="john@company.com" required />
-        </div>
-
-        <div class="form-group">
-          <label for="phone" data-i18n="form.phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="+253 77 879440" />
-        </div>
-
-        <div class="form-group">
-          <label for="buildingType" data-i18n="form.btype">Building Type</label>
-          <select id="buildingType" name="building_type" required>
-            <option value="" disabled selected data-i18n-opt="form.btype.ph">Select your building type</option>
-            <option value="commercial" data-i18n-opt="form.btype.commercial">Commercial Building</option>
-            <option value="industrial" data-i18n-opt="form.btype.industrial">Industrial Facility</option>
-            <option value="residential" data-i18n-opt="form.btype.residential">Residential Complex</option>
-            <option value="infrastructure" data-i18n-opt="form.btype.infrastructure">Infrastructure / Bridge</option>
-            <option value="solar" data-i18n-opt="form.btype.solar">Solar Installation</option>
-            <option value="Windmills" data-i18n-opt="form.btype.other">Windmills</option>
-            <option value="other" data-i18n-opt="form.btype.other">Other</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="message" data-i18n="form.message">Project Details</label>
-          <textarea id="message" name="message" data-i18n-ph="form.message.ph" placeholder="Describe your property, size, and cleaning requirements..." rows="4" required></textarea>
-        </div>
-
-        <!-- SUBMIT BUTTON -->
-        <button type="submit" class="btn-form-submit">
-          <span class="btn-text" data-i18n="form.submit">Request a Quote</span>
-          <span class="btn-icon">→</span>
-        </button>
-
-      </form>
+  <!-- FORM FIELDS -->
+  <div class="form-row">
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" placeholder="John" required />
     </div>
-  </div>  
-</div>
-</section>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" placeholder="Smith" required />
+    </div>
+  </div>
 
-<!-- 🔧 JS for full name -->
-<script>
-document.querySelector(".contact-form").addEventListener("submit", function() {
-  const first = document.getElementById("firstName").value;
-  const last = document.getElementById("lastName").value;
-  document.getElementById("fullName").value = first + " " + last;
-});
-</script>
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" id="email" placeholder="john@company.com" required />
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" placeholder="+253 77 879440" />
+  </div>
+
+  <div class="form-group">
+    <label for="buildingType">Building Type</label>
+    <select id="buildingType" required>
+      <option value="" disabled selected>Select your building type</option>
+      <option value="commercial">Commercial Building</option>
+      <option value="industrial">Industrial Facility</option>
+      <option value="residential">Residential Complex</option>
+      <option value="infrastructure">Infrastructure / Bridge</option>
+      <option value="solar">Solar Installation</option>
+      <option value="Windmills">Windmills</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Project Details</label>
+    <textarea id="message" placeholder="Describe your property, size, and cleaning requirements..." rows="4" required></textarea>
+  </div>
+
+  <!-- SUBMIT BUTTON -->
+  <button type="submit" class="btn-form-submit">
+    <span class="btn-text">Request a Quote</span>
+    <span class="btn-icon">→</span>
+  </button>
+
+</form>
+</div>
+</div>
+</div>
+</div>
+
 
   <!-- ====== FOOTER ====== -->
   <footer class="site-footer" aria-label="Site footer">
@@ -258,6 +242,7 @@ document.querySelector(".contact-form").addEventListener("submit", function() {
   </footer>
 
   <div class="toast" id="formToast" role="alert" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="lang.js"></script>
   <script src="main.js"></script>
   <script src="mail.js"></script>

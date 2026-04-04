@@ -338,3 +338,38 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
+(function() {
+  emailjs.init("kRxm71ZSJ4U9kgCC8"); // 🔑 replace this
+})();
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const first = document.getElementById("firstName").value;
+  const last = document.getElementById("lastName").value;
+
+  const templateParams = {
+    full_name: first + " " + last,
+    first_name: first,
+    last_name: last,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    building_type: document.getElementById("buildingType").value,
+    message: document.getElementById("message").value
+  };
+
+  emailjs.send("service_hgrf0nr", "template_p5aegib", templateParams)
+    .then(function() {
+      alert("✅ Message sent successfully!");
+      document.getElementById("contactForm").reset();
+    }, function(error) {
+      alert("❌ Failed to send message. Try again.");
+      console.error(error);
+    });
+});
+
+
+
+
