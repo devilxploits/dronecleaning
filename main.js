@@ -360,7 +360,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     message: document.getElementById("message").value
   };
 
-  emailjs.send("service_hgrf0nr", "template_p5aegib", templateParams)
+  emailjs.send("service_1l0ac24", "template_p5aegib", templateParams)
     .then(function() {
       alert("✅ Message sent successfully!");
       document.getElementById("contactForm").reset();
