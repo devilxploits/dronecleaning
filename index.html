@@ -610,88 +610,62 @@
         </div>
       </div>
 
-      
-  <!-- ====== CONTACT SECTION (FINAL CLEAN) ====== -->
-<section class="contact-section" id="contact" aria-label="Request a quote">
+<!-- ====== CONTACT SECTION (FINAL FIXED) ====== -->
+<section class="contact-section" id="contact">
   <div class="section-container">
     <div class="contact-grid">
 
-      <!-- LEFT CONTENT -->
+      <!-- LEFT -->
       <div class="contact-left">
         <div class="section-tag-dark">Get Started</div>
+
         <h2 class="section-title-dark">
-          Ready to clean<br />
+          Ready to clean<br>
           <span class="blue-text">at scale?</span>
         </h2>
 
         <p class="contact-desc">
-          Tell us about your project and we'll deploy a solution built around your needs and timeline.
+          Tell us about your project and we'll deploy a solution built around your needs.
         </p>
 
         <div class="contact-badges">
           <div class="badge">✓ Free site assessment</div>
           <div class="badge">✓ No scaffolding costs</div>
-          <div class="badge">✓ Insured & certified operators</div>
-          <div class="badge">✓ 24-hour quote turnaround</div>
+          <div class="badge">✓ Certified operators</div>
+          <div class="badge">✓ Fast quote</div>
         </div>
       </div>
 
       <!-- RIGHT FORM -->
       <div class="contact-form-wrapper">
 
-        <form class="contact-form" id="contactForm">
+        <form id="contactForm">
 
-          <!-- NAME -->
           <div class="form-row">
-            <div class="form-group">
-              <label>First Name</label>
-              <input type="text" name="first_name" placeholder="John" required />
-            </div>
-
-            <div class="form-group">
-              <label>Last Name</label>
-              <input type="text" name="last_name" placeholder="Smith" required />
-            </div>
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
           </div>
 
-          <!-- EMAIL -->
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" name="email" placeholder="john@company.com" required />
-          </div>
+          <input type="email" name="email" placeholder="Email Address" required>
 
-          <!-- PHONE -->
-          <div class="form-group">
-            <label>Phone Number</label>
-            <input type="tel" name="phone" placeholder="+253 77 879440" />
-          </div>
+          <input type="tel" name="phone" placeholder="Phone Number">
 
-          <!-- SERVICE -->
-          <div class="form-group">
-            <label>Building Type</label>
-            <select name="service" required>
-              <option value="" disabled selected>Select your building type</option>
-              <option>Commercial Building</option>
-              <option>Industrial Facility</option>
-              <option>Residential Complex</option>
-              <option>Infrastructure / Bridge</option>
-              <option>Solar Installation</option>
-              <option>Windmills</option>
-              <option>Other</option>
-            </select>
-          </div>
+          <select name="service" required>
+            <option value="">Select Building Type</option>
+            <option>Commercial Building</option>
+            <option>Industrial Facility</option>
+            <option>Residential Complex</option>
+            <option>Infrastructure / Bridge</option>
+            <option>Solar Installation</option>
+            <option>Windmills</option>
+            <option>Other</option>
+          </select>
 
-          <!-- MESSAGE -->
-          <div class="form-group">
-            <label>Project Details</label>
-            <textarea name="message" rows="4" required></textarea>
-          </div>
+          <textarea name="message" placeholder="Project details..." required></textarea>
 
-          <!-- HIDDEN -->
           <input type="hidden" name="subject" value="New Quote Request - Sky Cleaner">
           <input type="hidden" name="time" id="time">
 
-          <!-- BUTTON -->
           <button type="submit" class="btn-form-submit">
             <span class="btn-text">Request a Quote</span>
           </button>
@@ -699,10 +673,11 @@
         </form>
 
       </div>
+
     </div>
   </div>
 </section>
-
+      
   <!-- ====== FOOTER ====== -->
   <footer class="site-footer" aria-label="Site footer">
     <div class="footer-inner">
