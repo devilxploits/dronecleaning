@@ -341,35 +341,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 (function() {
-  emailjs.init("kRxm71ZSJ4U9kgCC8"); // 🔑 replace this
+  emailjs.init("kRxm71ZSJ4U9kgCC8");
 })();
 
 document.getElementById("contactForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  const first = document.getElementById("firstName").value;
-  const last = document.getElementById("lastName").value;
+  const btn = document.querySelector(".btn-form-submit");
+  const btnText = btn.querySelector(".btn-text");
 
-  const templateParams = {
-    full_name: first + " " + last,
-    first_name: first,
-    last_name: last,
-    email: document.getElementById("email").value,
-    phone: document.getElementById("phone").value,
-    building_type: document.getElementById("buildingType").value,
-    message: document.getElementById("message").value
-  };
+  // 🔄 Loading state
+  btn.disabled = true;
+  btnText.innerText = "Sending...";
 
-  emailjs.send("service_1l0ac24", "template_p5aegib", templateParams)
-    .then(function() {
-      alert("✅ Message sent successfully!");
+  // ✅ SET SUBJECT (IMPORTANT FIX)
+  document.querySelector('input[name="subject"]').value = "New Quote Request - Sky Cleaner";
+
+  emailjs.sendForm("service_1l0ac24", "template_p5aegib", "#contactForm")
+    .then(function(response) {
+
+      btnText.innerText = "Sent Successfully!";
+      btn.style.backgroundColor = "#28a745";
+
       document.getElementById("contactForm").reset();
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btnText.innerText = "Request a Quote";
+        btn.style.backgroundColor = "";
+      }, 3000);
+
     }, function(error) {
-      alert("❌ Failed to send message. Try again.");
-      console.error(error);
+
+      console.error("EmailJS Error:", error);
+
+      btnText.innerText = "Failed! Try Again";
+      btn.style.backgroundColor = "#dc3545";
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btnText.innerText = "Request a Quote";
+        btn.style.backgroundColor = "";
+      }, 3000);
+
     });
 });
-
-
-
-
